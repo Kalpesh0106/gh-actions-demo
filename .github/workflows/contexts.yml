@@ -16,4 +16,4 @@ jobs:
       - name: Dump Step Information
         env:
           CONTEXT_ITEM: ${{ toJson(steps) }}
-        run: echo "${CONTEXT_ITEM}
+        run: echo "${CONTEXT_ITEM}"
