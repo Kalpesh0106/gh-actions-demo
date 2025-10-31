@@ -17,4 +17,4 @@ jobs:
       - name: Run EXE using cmd
         shell: cmd
         run: |
-          C:\path\to\tool.exe --arg1 value
+          .\tool.exe --arg1 value
