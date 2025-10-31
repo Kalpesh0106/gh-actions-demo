@@ -11,14 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Wine
-        run: |
-          sudo dpkg --add-architecture i386
-          sudo apt update
-          sudo apt install -y wine64 wine32
+      - name: Download exe (example)
+        run: Invoke-WebRequest -Uri "https://example.com/tool.exe" -OutFile tool.exe
 
-      - name: Download exe
-        run: curl -L -o tool.exe https://example.com/tool.exe
-
-      - name: Run with Wine
-        run: wine tool.exe --arg1 value
+      - name: Run the .exe (PowerShell)
+        shell: pwsh
+        run: .\tool.exe --arg1 value
