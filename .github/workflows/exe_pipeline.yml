@@ -10,17 +10,13 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download exe (example)
-        run: Invoke-WebRequest -Uri "https://www.examplefile.com/file-download/112" -OutFile tool.exe
-
-      - name: Unblock file
-        shell: powershell
-        run: Unblock-File .\tool.exe
         
-      - name: Run EXE using cmd
+      - name: Verify file exists
+        run: dir .
+
+      # 3️⃣ Run your executable
+      - name: Execute EXE
         shell: cmd
         run: |
-          .\tool.exe --arg1 value
-
-      
+          echo Running tool.exe...
+          Frescalo_3a_windows.exe --arg1 value
