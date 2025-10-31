@@ -14,6 +14,7 @@ jobs:
       - name: Download exe (example)
         run: Invoke-WebRequest -Uri "https://www.examplefile.com/file-download/112" -OutFile tool.exe
 
-      - name: Run the .exe (PowerShell)
-        shell: pwsh
-        run: .\tool.exe --arg1 value
+      - name: Run EXE using cmd
+        shell: cmd
+        run: |
+          C:\path\to\tool.exe --arg1 value
