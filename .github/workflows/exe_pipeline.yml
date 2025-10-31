@@ -19,4 +19,4 @@ jobs:
         shell: cmd
         run: |
           echo Running tool.exe...
-          Frescalo_3a_windows.exe --arg1 value
+          Frescalo_3a_windows.exe
