@@ -11,11 +11,23 @@ on:
         description: "Last Name"
         required: true
         type: string
+      education:
+        description: "Highest Education"
+        required: true
+        type: string
+      grade:
+        description: "Grade"
+        required: false
+        type: float
+      experience: 
+        description: "Experience"
+        required: true
+        type: float
       organization:
         description: "Current Organziation"
         required: true
         type: string
-      last-organization:
+      last_organization:
         description: "Last Organization"
         required: true
         type: string
@@ -43,6 +55,8 @@ jobs:
         run: |
           echo "First name: ${{ github.event.inputs.fname }} "
           echo "Last name: ${{ github.event.inputs.lname }} "
+          echo "Current Organization: ${{ github.event.inputs.organization }}"
+          echo "Vehicle type: ${{ github.event.inputs.vehicle }}"
           
           
       
