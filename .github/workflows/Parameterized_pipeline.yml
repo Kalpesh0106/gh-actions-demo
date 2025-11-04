@@ -1,0 +1,50 @@
+name: Parameterized Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      fname:
+        description: "First Name"
+        required: true
+        type: string
+      lname:
+        description: "Last Name"
+        required: true
+        type: string
+      organization:
+        description: "Current Organziation"
+        required: true
+        type: string
+      last-organization:
+        description: "Last Organization"
+        required: true
+        type: string
+      tech_stack:
+        description: "What is your primary skill"
+        required: true
+        type: string
+      address:
+        description: "Provide your address"
+        required: true
+        type: string
+      vehicle:
+        description: "Which vehicle you own?"
+        required: true
+        type: choice
+        options:
+          - 2 wheeler
+          - 4 wheeler
+
+jobs:
+  print_details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Printing input parameters
+        run: |
+          echo "First name: ${{ github.event.inputs.fname }} "
+          echo "Last name: ${{ github.event.inputs.lname }} "
+          
+          
+      
+    
+
