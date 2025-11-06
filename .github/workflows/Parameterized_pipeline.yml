@@ -1,6 +1,8 @@
 name: Parameterized Pipeline
 
 on:
+  push:
+    branches: temp
   workflow_dispatch:
     inputs:
       fname:
