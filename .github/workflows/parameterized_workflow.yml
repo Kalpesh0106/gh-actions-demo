@@ -70,6 +70,7 @@ jobs:
           echo "Last name: ${{ github.event.inputs.lname }} "
           echo "Current Organization: ${{ github.event.inputs.organization }}"
           echo "Vehicle type: ${{ github.event.inputs.vehicle }}"
+          echo "Married: ${{ github.event.inputs.married }}"
           
           
       
