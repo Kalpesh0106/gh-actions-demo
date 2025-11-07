@@ -31,18 +31,18 @@ on:
         description: "Experience"
         required: true
         type: float
-      organization:
-        description: "Current Organziation"
-        required: true
-        type: string
-      last_organization:
-        description: "Last Organization"
-        required: true
-        type: string
-      tech_stack:
-        description: "What is your primary skill"
-        required: true
-        type: string
+      #organization:
+        #description: "Current Organziation"
+        #required: true
+        #type: string
+      #last_organization:
+        #description: "Last Organization"
+        #required: true
+        #type: string
+      #tech_stack:
+        #description: "What is your primary skill"
+        #required: true
+        #type: string
       address:
         description: "Provide your address"
         required: true
